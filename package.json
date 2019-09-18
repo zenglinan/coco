@@ -1,11 +1,14 @@
 {
-  "name": "coco",
-  "version": "0.1.0",
-  "private": true,
+  "name": "coco-ui",
+  "version": "0.1.1",
+  "main": "dist/app.1689bf15.js",
+  "repository": "https://github.com/zenglinan/coco.git",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit"
+    "build": "vue-cli-service build src/index.js",
+    "test:unit": "vue-cli-service test:unit",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -19,7 +22,8 @@
     "chai": "^4.1.2",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.1.0"
   },
   "postcss": {
     "plugins": {
