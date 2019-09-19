@@ -48,7 +48,7 @@
           'i-stop'
         ],
         importMsg: `
-import { Icon } from coco-test
+import { Icon } from 'coco-ui'
         `.trim(),
         code1: `
 <c-icon icon="i-user"></c-icon>

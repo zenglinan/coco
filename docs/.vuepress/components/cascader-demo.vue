@@ -4,7 +4,7 @@
     <c-card :code="importMsg">
       <template v-slot:descript>
         引入 <span class="md">Cascader</span> 组件。<br>
-        如果需要引用内置的省市区数据, 需要引用 <span class="md"></span> 数据文件
+        如果需要引用内置的省市区数据, 需要引用 <span class="md">areaData</span> 数据文件
       </template>
     </c-card>
 
@@ -68,8 +68,9 @@
         selected: [],
         selected2: [],
         importMsg: `
-import { Cascader } from coco-test
-        `,
+import { Cascader } from 'coco-ui'
+import { areaData } from 'coco-ui'
+        `.trim(),
         code1: `
 <c-cascader :selected.sync="selected" :db="data">
 

@@ -1,5 +1,5 @@
 ---
-title: 'Form 表单'
+title: 'Form'
 sidebarDepth: 2
 ---
 

@@ -1,5 +1,12 @@
 <template>
   <div class="tabs">
+    <h3>引入组件</h3>
+    <c-card :code="importMsg">
+      <template v-slot:descript>
+        引入 <span class="md">Tab</span>, <span class="md">TabItem</span>, <span class="md">TabContent</span>, <span class="md">TabPane</span>, <span class="md">TabNav</span>, 组件。<br>
+      </template>
+    </c-card>
+
     <h3>基础用法</h3>
     <c-card :code="code1">
       <c-tabs :selectedItems.sync="selectedItems" direction="row">
@@ -122,6 +129,9 @@
         selectedItems: "setting",
         selectedItems2: "setting",
         selectedItems3: "setting",
+        importMsg: `
+import { Tab, TabNav, TabContent, TabPane, TabItem } from 'coco-ui'
+        `.trim(),
         code1: `
 <c-tabs :selectedItems.sync="selectedItems">
   <c-tab-nav>

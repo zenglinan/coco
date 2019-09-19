@@ -1,5 +1,5 @@
 ---
-title: 'Notice 通知'
+title: 'Notice'
 sidebarDepth: 2
 ---
 

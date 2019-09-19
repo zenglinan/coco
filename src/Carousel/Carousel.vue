@@ -11,7 +11,7 @@
         <use xlink:href="#i-right"/>
       </svg>
     </div>
-    <div class="points">
+    <div class="points" v-if="indicator">
       <span class="point"
             ref="point"
             v-for="(item,itemIndex) in childLen" :key="itemIndex"
@@ -38,16 +38,24 @@
     props: {
       delay: {
         type: String | Number
+      },
+      indicator: {
+        type: Boolean,
+        default: false
+      },
+      auto: {
+        type: Boolean,
+        default: true
       }
     },
     methods: {
       startCarousel() {
         this.showCarousel(this.index)  // 为了使得点上一张下一张后立马显示当前visibleIndex的幻灯片
-        this.timer = setInterval(() => {
+        this.auto && (this.timer = setInterval(() => {
           this.hideCarousel(this.index)
           this.index = ((this.index + 1) % this.childLen)
           this.showCarousel(this.index)
-        }, this.delay)
+        }, this.delay))
       },
       showCarousel(index) {
         this.justDirection(index)
@@ -84,12 +92,14 @@
         this.rightDir = true
         this.cancelCarousel()  // 先将当前index的visible设为false, 然后在设置上一张可见, 避免因为层级关系被挡住
         this.index = ((this.index + this.childLen - 1) % this.childLen)
+        this.$emit('toLast', this.index)
         this.startCarousel()
         this.rightDir = false
       },
       toNext() {
         this.cancelCarousel()
         this.index = (this.index + 1) % this.childLen
+        this.$emit('toNext', this.index)
         this.startCarousel()
       },
       setSize() {
@@ -101,7 +111,7 @@
     },
     mounted() {
       this.childLen = this.$children.length
-      this.init()  // 设置c-carousel的宽高, 并且生成小圆点
+      this.init()  // 设置c-carousel的宽高, 并且生成指示器
       this.startCarousel()  // 开始轮播
     }
   }

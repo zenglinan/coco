@@ -1,5 +1,12 @@
 <template>
   <div class="demo">
+    <h3>引入组件</h3>
+    <c-card :code="importMsg">
+      <template v-slot:descript>
+        引入 <span class="md">Wrapper</span>, <span class="md">Header</span>, <span class="md">Content</span>, <span class="md">Footer</span>, <span class="md">Sidebar</span> 组件。<br>
+      </template>
+    </c-card>
+
     <h3>常用布局</h3>
     <c-card :code="code1">
       <div class="layout">
@@ -60,6 +67,9 @@
     },
     data() {
       return {
+        importMsg: `
+import { Wrapper, Content, Header, Footer, Sidebar } from 'coco-ui'
+        `.trim(),
         code1: `
 <!-- 上中下布局 -->
 <c-wrapper style="margin-bottom: 30px;">

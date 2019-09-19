@@ -119,8 +119,8 @@
     data() {
       return {
         importMsg: `
-import { Row, Col } from coco-test
-        `,
+import { Row, Col } from 'coco-ui'
+        `.trim(),
         code1: `
 <c-row>
   <c-col span="24" style="height: 30px;"></c-col>

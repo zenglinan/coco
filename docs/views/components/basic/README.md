@@ -1,5 +1,5 @@
 ---
-title: 'Basic 基础'
+title: 'Basic'
 sidebarDepth: 2
 ---
 ## Icon 图标

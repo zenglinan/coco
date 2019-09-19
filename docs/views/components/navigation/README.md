@@ -1,5 +1,5 @@
 ---
-title: 'Navigation 导航'
+title: 'Navigation'
 sidebarDepth: 2
 ---
 

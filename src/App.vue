@@ -61,22 +61,22 @@
     <!--    <div class="pager">-->
     <!--      <c-pager :total="20" :current.sync="current" :hide-if-one-page="true" @onChange="x"></c-pager>-->
     <!--    </div>-->
-    <!--    <div class="slides" style="margin-left: 500px">-->
-    <!--      <c-slides :width="183" :delay="3000">-->
-    <!--        <c-slides-item>-->
-    <!--          <div class="xxx">1</div>-->
-    <!--        </c-slides-item>-->
-    <!--        <c-slides-item>-->
-    <!--          <div class="xxx">2</div>-->
-    <!--        </c-slides-item>-->
-    <!--        <c-slides-item>-->
-    <!--          <div class="xxx">3</div>-->
-    <!--        </c-slides-item>-->
-    <!--        <c-slides-item>-->
-    <!--          <div class="xxx">4</div>-->
-    <!--        </c-slides-item>-->
-    <!--      </c-slides>-->
-    <!--    </div>-->
+        <div class="slides" style="margin-left: 500px">
+          <c-slides :width="183" :delay="3000">
+            <c-slides-item>
+              <div class="xxx">1</div>
+            </c-slides-item>
+            <c-slides-item>
+              <div class="xxx">2</div>
+            </c-slides-item>
+            <c-slides-item>
+              <div class="xxx">3</div>
+            </c-slides-item>
+            <c-slides-item>
+              <div class="xxx">4</div>
+            </c-slides-item>
+          </c-slides>
+        </div>
     <!--        <div class="cascader">-->
     <!--          <c-cascader :selected.sync="selected" :db="data">-->
     <!--          </c-cascader>-->

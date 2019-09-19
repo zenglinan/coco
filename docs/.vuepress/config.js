@@ -1,11 +1,11 @@
 module.exports = {
   title: 'CoCo UI',
   description: '一个适合学习的 UI 框架',
-  base: '/Coco-UI/',
+  base: '/coco/',
   themeConfig: {
     displayAllHeaders: true,
     nav: [
-      {text: 'Github', link: 'https://github.com/zenglinan/Coco-UI'},
+      {text: 'Github', link: 'https://github.com/zenglinan/coco'},
       {text: 'Home', link: '/'}
     ],
     sidebar: [
@@ -19,11 +19,13 @@ module.exports = {
       },
       {
         title: '组件',
-        collapsable: true,
+        collapsable: false,
         children: [
           'views/components/basic/',
           'views/components/form/',
           'views/components/navigation/',
+          'views/components/notice/',
+          'views/components/others/',
         ]
       }
 

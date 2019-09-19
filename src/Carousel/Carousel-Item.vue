@@ -30,29 +30,29 @@
   }
 
   .carousel-enter-active, .carousel-leave-active {
-    transition: all .5s;
+    transition: all 1s;
   }
 
   .carousel-enter {
     opacity: 0;
-    transform: translateX(50%);
+    transform: translateX(35%);
   }
 
   .carousel-leave-to {
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(-35%);
   }
 
   .rightDirection {
 
     & .carousel-enter {
       opacity: 0;
-      transform: translateX(-50%);
+      transform: translateX(-35%);
     }
 
     & .carousel-leave-to {
       opacity: 0;
-      transform: translateX(50%);
+      transform: translateX(35%);
     }
 
   }

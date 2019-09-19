@@ -1,5 +1,12 @@
 <template>
   <div class="c-card">
+    <h3>引入组件</h3>
+    <c-card :code="importMsg">
+      <template v-slot:descript>
+        引入 <span class="md">Input</span> 组件。<br>
+      </template>
+    </c-card>
+
     <h3>基本用法</h3>
     <c-card :code="code1">
       <div class="input">
@@ -83,6 +90,9 @@
         promptType: 'error',
         promptType2: 'error',
         message: '我支持双向绑定',
+        importMsg: `
+import { Input } from 'coco-ui'
+        `.trim(),
         code1: `
 <c-input placeholder="请输入..."></c-input>
         `.trim(),

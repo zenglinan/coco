@@ -4,7 +4,6 @@
     <c-card :code="importMsg">
       <template v-slot:descript>
         引入 <span class="md">Button</span>, <span class="md">ButtonGroup</span> 组件。<br>
-        如果需要 icon 按钮, 需要引用 <span class="md">Icon</span> 组件
       </template>
     </c-card>
 
@@ -82,7 +81,6 @@
   import Button from '../../../src/Button/Button'
   import ButtonGroup from '../../../src/Button/Button-Group'
   import Card from '../../../src/Card/Card'
-  import Icon from '../../../src/Icon/icon'
 
 
   export default {
@@ -90,14 +88,13 @@
     components: {
       'c-button': Button,
       'c-button-group': ButtonGroup,
-      'c-icon': Icon,
       'c-card': Card
     },
     data() {
       return {
         ifLoading: false,
         importMsg: `
-import { Button, ButtonGroup } from coco-test
+import { Button, ButtonGroup } from 'coco-ui'
 import { Icon } from coco
         `.trim(),
         code1: `

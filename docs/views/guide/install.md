@@ -6,7 +6,7 @@ title: '安装'
 ### 本地引用
 下载 github 仓库到本地, 就可以进行组件注册引用了
 ```asp
-git clone git@github.com:zenglinan/Coco-UI.git
+git clone git@github.com:zenglinan/coco.git
 ```
 
 ### npm 安装
