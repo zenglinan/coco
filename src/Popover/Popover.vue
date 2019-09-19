@@ -87,7 +87,7 @@
 
   .c-content {padding: 12px;background: $bg;
     border: 1px solid $border-color-light;position: absolute;color: $brown;font-size: 14px;
-    border-radius: 5px;max-width: 20em;z-index: 10;word-break: keep-all;
+    border-radius: 5px;z-index: 10;white-space:nowrap;
     display: flex;align-items: center;justify-content: center;flex-direction: column;
 
     &::after, &::before {content: '';display: block;position: absolute;

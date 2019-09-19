@@ -38,32 +38,29 @@
     methods: {
       toast1() {
         this.$toast(
-            {
-              message: '小管家提醒您: 注意休息哦~',
-              position: 'bottom',
-              closeDelay: 2,
-              callback: ()=>{
-                alert(1)
-              }
-            }
+          {
+            message: '小管家提醒您: 注意休息哦~',
+            position: 'bottom',
+            closeDelay: 2,
+          }
         )
       },
       toast2() {
         this.$toast(
-            {
-              message: '避免久坐',
-              position: 'middle',
-              closeDelay: 2
-            }
+          {
+            message: '避免久坐',
+            position: 'middle',
+            closeDelay: 2
+          }
         )
       },
       toast3() {
         this.$toast(
-            {
-              message: '多喝热水',
-              position: 'top',
-              closeDelay: 2
-            }
+          {
+            message: '多喝热水',
+            position: 'top',
+            closeDelay: 2
+          }
         )
       }
     },

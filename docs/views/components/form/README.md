@@ -19,7 +19,7 @@ sidebarDepth: 2
 | size | 输入框大小 | String, Number | 3, 2, 1 | 2 |
 </ClientOnly>
 
-<br><br><br><br>
+<br><br>
 
 ## Cascader 级联选择器
 <ClientOnly>

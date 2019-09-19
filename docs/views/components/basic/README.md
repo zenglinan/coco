@@ -11,7 +11,7 @@ sidebarDepth: 2
 | icon | 图标名称 | String | 内置 icon 名 | - |
 </ClientOnly>
 
-<br><br><br><br>
+<br><br>
 
 ## Button 按钮
 <ClientOnly>
@@ -26,14 +26,14 @@ sidebarDepth: 2
 
 </ClientOnly>
 
-<br><br><br><br>
+<br><br>
 
 ## Layout 布局
 <ClientOnly>
   <layout-demo/>
 </ClientOnly>
 
-<br><br><br><br>
+<br><br>
 
 ## Grid 栅格系统
 <ClientOnly>

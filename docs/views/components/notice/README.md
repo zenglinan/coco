@@ -19,4 +19,17 @@ sidebarDepth: 2
 | callback | 关闭 Toast 后触发 | - | - | - |
 </ClientOnly>
 
-<br><br><br><br>
+<br><br>
+
+## Popover 弹出框
+<ClientOnly>
+  <popover-demo/>
+
+<font size=5>Attributes</font>
+| 参数| 说明 | 类型 | 可选值 | 默认值 |
+| :------ | ------ | ------ | ------ | ------ |
+| trigger | 触发方式 | String | 'hover', 'click' | 'click' |
+| direction | Popover 出现方向 | String |'top', 'bottom', 'left', 'right' | 'top' |
+| delay | 'hover' 触发下, 延迟消失的时间 | String, Number | - | 0 |
+
+</ClientOnly>
