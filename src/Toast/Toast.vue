@@ -1,13 +1,20 @@
 <template>
   <div class="c-toast" :class="{[`toast-${position}`]: true}">
     <slot></slot>
-    <div class="c-close" @click="close()"></div>
+    <c-icon class="c-close" icon="i-close" @click="close()"></c-icon>
   </div>
 </template>
 
 <script>
+  import Icon from '../Icon/icon'
+
   export default {
     name: "coco-toast",
+    data(){
+      return{
+        timer: null
+      }
+    },
     props: {
       autoClose: {
         type: Boolean,
@@ -28,15 +35,19 @@
         }
       }
     },
+    components: {
+      'c-icon': Icon
+    },
     mounted() {
       if (this.autoClose === true) {
-        setTimeout(() => {
+        this.timer = setTimeout(() => {
           this.close()
         }, this.closeDelay * 1000)
       }
     },
     methods: {
       close() {
+        clearTimeout(this.timer)
         this.$el.remove()
         this.$destroy()
         this.callback && this.callback()
@@ -47,44 +58,31 @@
 
 <style scoped lang="scss">
   @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 100%;
-    }
+    0% {opacity: 0;}
+    100% {opacity: 100%;}
   }
 
-  ;
   @keyframes slideUp {
-    0% {
-      transform: translate(-50%, 100%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+    0% {transform: translate(-50%, 100%);}
+    100% {transform: translateX(-50%);}
   }
 
   @keyframes slideDown {
-    0% {
-      transform: translate(-50%, -100%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+    0% {transform: translate(-50%, -100%);}
+    100% {transform: translateX(-50%);}
   }
 
   $font-size: 14px;
   $toast-min-height: 42px;
-  $toast-bg: rgba(0, 0, 0, 0.65);
+  $toast-bg: rgb(237, 242, 252);
   $border-radius: 4px;
   $animation-time: .3s;
   .c-toast {
-    animation: fadeIn $animation-time;
+    animation: fadeIn $animation-time;letter-spacing: 2px;
     font-size: $font-size; height: $toast-min-height; line-height: 1.8;
     position: fixed; left: 50%; transform: translateX(-50%); display: flex;
-    color: white;align-items: center;background: $toast-bg;border-radius: $border-radius;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);padding: 0 60px;z-index: 100;
+    color: #909399;align-items: center;background: $toast-bg;border-radius: $border-radius;
+    border: 1px solid #ebeef5; padding: 0 60px;z-index: 100;
 
     &.toast-top {top: 10px; animation: slideDown $animation-time;}
 
@@ -92,8 +90,9 @@
 
     &.toast-bottom {bottom: 10px; animation: slideUp $animation-time;}
 
-    & .c-close {cursor: pointer;background-position: center;background-image: url("../../asset/close.png");
-      background-size: cover;content: '';height: 10px;display: block;position: absolute;
-      right: 3px;top: 3px;width: 10px;}
+    & .c-close {
+      cursor: pointer;position: absolute;right: 4px;top: 4px;
+      width: 10px;height: 10px;
+    }
   }
 </style>
