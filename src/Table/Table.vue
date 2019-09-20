@@ -156,8 +156,8 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../common/scss/base";
-  @import "../common/scss/scrollbar";
+  @import "../../asset/base";
+  @import "../../asset/scrollbar";
 
   @mixin border-bottom() {
     border-bottom: 1px solid darken($beige-light, 2%);

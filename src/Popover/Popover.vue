@@ -82,7 +82,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../common/scss/base";
+  @import "../../asset/base";
   .c-popover {display: inline-flex;flex-direction: column;position: relative;}
 
   .c-content {padding: 12px;background: $bg;

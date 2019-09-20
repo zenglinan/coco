@@ -64,8 +64,8 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../common/scss/base";
-  @import "../common/scss/scrollbar";
+  @import "../../asset/base";
+  @import "../../asset/scrollbar";
 
   .cascaderItem {
     display: flex;

@@ -118,7 +118,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../common/scss/base";
+  @import "../../asset/base";
 
   .c-carousel {
     display: inline-flex;

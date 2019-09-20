@@ -79,7 +79,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../src/common/scss/base";
+  @import "../../asset/base";
 
   .my-transition {transition: 3s height ease-in-out}
 

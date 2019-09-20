@@ -35,7 +35,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../common/scss/base";
+  @import "../../asset/base";
   .c-collapse {
     border-top: 1px solid $beige;
   }

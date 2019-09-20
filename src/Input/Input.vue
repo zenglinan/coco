@@ -78,7 +78,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../common/scss/base";
+  @import "../../asset/base";
 
   $height-b: 36px;
   $height-m: 32px;

@@ -27,3 +27,22 @@ sidebarDepth: 2
 </ClientOnly>
 
 <br><br>
+
+## Pager 分页器
+<ClientOnly>
+  <pager-demo></pager-demo>
+<font size=5>Attributes</font>
+| 参数| 说明 | 类型 | 可选值 | 默认值 |
+| :------ | ------ | ------ | ------ | ------ |
+| total | 总页码数 | Number, String | - | - |
+| current | 当前显示页码 | Number, String | - | - |
+| hideIfOnePage | 总页码为 1 时是否隐藏分页器 | Boolean | true, false | true |
+| transfer | 是否开启传送门 | Boolean | true, false | false |
+
+<font size=5>Attributes</font>
+| 参数| 说明 | 参数 |
+| :------ | ------ | ------ | ------ | ------ |
+| error | 错误捕获函数 | 错误信息 |
+
+</ClientOnly>
+

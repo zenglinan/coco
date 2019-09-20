@@ -71,7 +71,7 @@
 
 </script>
 <style lang="scss" scoped>
-  @import "../common/scss/base";
+  @import "../../asset/base";
 
   @mixin setColor($backgroundColor, $color,$borderColor, $hoverColor,$activeColor) {
     background-color: $backgroundColor;
