@@ -1,15 +1,10 @@
 <p align="center">
   <a href="https://zenglinan.github.io/coco">
-    <img width="200" src="https://github.com/zenglinan/coco/blob/master/docs/.vuepress/public/logo.png">
+    <img width="300" src="https://github.com/zenglinan/coco/blob/master/docs/.vuepress/public/logo.png">
   </a>
 </p>
 
-<div align="center">
-
-基于 Vue.js 开发的一套风格简洁的 UI 框架。
-
-
-</div>
+<h2 align="center">基于 Vue.js 开发的一套风格简洁的 UI 框架。</h2>
 
 
 ### 🌟 特点
