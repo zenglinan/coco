@@ -1,34 +1,50 @@
-# coco
+<p align="center">
+  <a href="https://zenglinan.github.io/coco">
+    <img width="200" src="https://github.com/zenglinan/coco/blob/master/docs/.vuepress/public/logo.png">
+  </a>
+</p>
 
-## Project setup
-```
-npm install
-```
+<h1 align="center">Coco UI</h1>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<div align="center">
 
-### Compiles and minifies for production
-```
-npm run build
-```
+基于 Vue.js 开发的一套风格简洁的 UI 框架。
 
-### Run your tests
-```
-npm run test
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+</div>
 
-### Run your unit tests
-```
-npm run test:unit
+
+### 🌟 特点
+
+- 提供简洁易用的 API 和清爽简洁的组件风格。
+- 高覆盖率单元测试，保证组件可用性。
+- 开箱即用的高质量 Vue 组件。
+
+
+## 📦 安装
+
+```bash
+npm install coco-ui
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```bash
+yarn add coco-ui
+```
+
+## 🔨 示例
+
+只支持按需加载组件：
+```vue
+import { Button } from 'coco-ui';
+```
+
+## 🔗 链接
+
+- [首页](https://zenglinan.github.io/coco)
+- [Coco Basic](https://zenglinan.github.io/coco/views/components/basic)
+- [Coco Data](https://zenglinan.github.io/coco/views/components/data/)
+- [Coco Navigation](https://zenglinan.github.io/coco/views/components/navigation/)
+- [Coco Notice](https://zenglinan.github.io/coco/views/components/notice/)
+- [Coco Others](https://zenglinan.github.io/coco/views/components/others/)
+- [Issue](https://github.com/zenglinan/coco/issues)
+
