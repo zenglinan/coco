@@ -3,7 +3,7 @@
     <div class="tableInnerWrapper" :style="{height}" ref="innerWrapper">
       <table :class="{compressed, hasBorder}" ref="table">
         <thead ref="thead">
-        <tr>
+        <tr style="width: 100%">
           <th v-if="selectable" @change="onChangeAll($event)" :style="{width: '60px'}">
             <div class="thContent">
               <input type="checkbox" :checked="selector">
@@ -26,8 +26,8 @@
           </th>
         </tr>
         </thead>
-        <tbody>
-        <tr v-for="(dataItem, dataIndex) in data" :key="dataIndex" >
+        <tbody style="width: 100%" :class="{'striped': striped}">
+        <tr v-for="(dataItem, dataIndex) in data" :key="dataIndex" style="width: 100%">
           <td v-if="selectable"
               @change="onChangeItem($event, dataItem, dataIndex)"
               :style="{width: '60px'}"
@@ -42,7 +42,6 @@
           </template>
         </tr>
         </tbody>
-
       </table>
     </div>
     <div class="loading" v-show="loading">
@@ -70,19 +69,19 @@
       },
       indexVisible: {
         type: Boolean,
-        default: true
+        default: false
       },
       compressed: {  // 紧凑
         type: Boolean,
         default: false
       },
-      hasBorder: {  //内部格子边框
+      hasBorder: {
         type: Boolean,
-        default: false
+        default: true
       },
       striped: {  // 间隔颜色变化
         type: Boolean,
-        default: true
+        default: false
       },
       selectable: {  // 是否可勾选
         type: Boolean,
@@ -159,66 +158,37 @@
   @import "../../asset/base";
   @import "../../asset/scrollbar";
 
-  @mixin border-bottom() {
-    border-bottom: 1px solid darken($beige-light, 2%);
-  }
+  @mixin border-bottom() {border-bottom: 1px solid darken($beige-light, 2%);}
 
-  @mixin border() {
-    border: 1px solid darken($beige-light, 2%);
-  }
+  @mixin border() {border: 1px solid darken($beige-light, 2%);}
 
   @include rotateAnimation;
 
-  *{box-sizing: border-box;}
-  .c-table {
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
+  * {box-sizing: border-box;}
 
-    .fakeTable {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+  .c-table {box-sizing: border-box;position: relative;overflow: hidden;
 
-    .tableInnerWrapper {
-      overflow: auto;
-    }
+    .fakeTable {position: absolute;top: 0;left: 0;}
 
-    table {
-      @include border();
-      border-collapse: separate;
-      border-spacing: 0;
-      text-align: left;
-      width: 100%;
-      border-radius: 4px;
+    .tableInnerWrapper {overflow: auto;}
+
+    table {@include border();border-collapse: separate;border-spacing: 0;
+      text-align: left;display: table;width: 100%;
 
       thead {
         tr {
-          background-color: $beige-lighter;
+          background-color: rgb(255, 255, 255);
 
           th.canSort {
             transition: all .3s;
 
-            &:hover {
-              background-color: rgb(233, 233, 233);
-              cursor: pointer;
-            }
+            &:hover {background-color: rgb(235, 247, 255);;cursor: pointer;}
 
-            .tableSorter {
-              display: flex;
-              flex-direction: column;
-              margin-left: 4px;
+            .tableSorter {display: flex;flex-direction: column;margin-left: 4px;
 
-              svg {
-                width: 8px;
-                height: 8px;
-                fill: rgb(191, 191, 191);
-                transition: all .2s;
+              svg {width: 8px;height: 8px;fill: rgb(191, 191, 191);transition: all .2s;
 
-                &.active {
-                  fill: rgb(24, 144, 255);
-                }
+                &.active {fill: rgb(24, 144, 255);}
               }
             }
           }
@@ -226,44 +196,33 @@
           .thContent {
             display: flex;
             align-items: center;
-            color: rgb(76, 76, 76);
+            color: #909399;
           }
         }
       }
 
       tbody {
-        tr {
-          transition: background .3s;
-          color: rgb(89, 89, 89);
-
-          &:nth-child(even) {
-            background-color: rgb(247, 247, 247);
+        &.striped{
+          tr{
+            &:nth-child(even) {background-color: rgb(245,247,250);}
+            &:hover {background: rgb(235, 247, 255);}
           }
-
-          &:hover {
-            background: rgb(230, 247, 255);
-          }
-
+        }
+        tr {transition: background .3s;color: #606266;font-size: 14px;background-color: #fff;
+          &:hover {background: rgb(235, 247, 255);}
         }
       }
 
-      td, th {
-        padding: 10px;
-        @include border-bottom();
-      }
+      td, th {padding: 10px;@include border-bottom();}
 
       tr {
         @include border-bottom();
 
-        &:last-child {
-          border-bottom: none;
-        }
+        &:last-child {border-bottom: none;}
       }
 
       &.compressed {
-        td, th {
-          padding: 6px;
-        }
+        td, th {padding: 6px; font-size: 12px}
       }
 
       &.hasBorder {
@@ -274,54 +233,30 @@
             td {
               @include border-bottom();
 
-              &:first-child {
-                border-bottom-left-radius: 4px;
-              }
+              &:first-child {border-bottom-left-radius: 4px;}
 
-              &:last-child {
-                border-bottom-right-radius: 4px;
-              }
+              &:last-child {border-bottom-right-radius: 4px;}
             }
           }
 
-          td, th {
-            @include border();
-            border-bottom: none;
-          }
+          td, th {@include border();border-bottom: none;}
 
-          td:not(:first-child), th:not(:first-child) {
-            border-left: none;
-          }
+          td:not(:first-child), th:not(:first-child) {border-left: none;}
 
-          th:first-child {
-            border-top-left-radius: 4px;
-          }
+          th:first-child {border-top-left-radius: 4px;}
 
-          th:last-child {
-            border-top-right-radius: 4px;
-          }
+          th:last-child {border-top-right-radius: 4px;}
         }
 
       }
     }
 
 
-    .loading {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, .7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .loading {position: absolute;top: 0;left: 0;
+      width: 100%;height: 100%;background-color: rgba(255, 255, 255, .7);
+      display: flex;justify-content: center;align-items: center;
 
-      svg {
-        width: 20px;
-        height: 20px;
-        animation: rotate .6s linear infinite;
-      }
+      svg {width: 20px;height: 20px;animation: rotate .6s linear infinite;}
     }
 
   }

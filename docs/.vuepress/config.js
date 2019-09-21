@@ -22,7 +22,7 @@ module.exports = {
         collapsable: false,
         children: [
           'views/components/basic/',
-          'views/components/form/',
+          'views/components/data/',
           'views/components/navigation/',
           'views/components/notice/',
           'views/components/others/',

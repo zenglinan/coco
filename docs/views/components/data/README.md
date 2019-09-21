@@ -1,5 +1,5 @@
 ---
-title: 'Form'
+title: 'Data'
 sidebarDepth: 2
 ---
 
@@ -29,4 +29,24 @@ sidebarDepth: 2
 | :------ | ------ | ------ | ------ | ------ |
 | selected | 选中项的数组 | Array | - | - |
 | db | 级联数据 | Array | - | - |
+</ClientOnly>
+
+<br><br>
+
+## Table 表格
+<ClientOnly>
+  <table-demo/>
+<font size=5>Attributes</font>
+| 参数| 说明 | 类型 | 可选值 | 默认值 |
+| :------ | ------ | ------ | ------ | ------ |
+| columns | 表头数据 | Array | - | - |
+| data | 表格内容数据 | Array | - | - |
+| indexVisible | 是否开启索引列 | Boolean | true, false | false |
+| compressed | 紧凑型表格 | Boolean | true, false | false |
+| striped | 间隔颜色是否发生变化 | Boolean | true, false | false |
+| selectable | 是否开启勾选列 | Boolean | true, false | false |
+| selectedItems | 勾选项 | Array | - | [] |
+| sortRules | 键值对的键为列名, 值为该列的排序状态, 可选: 'desc', 'asc', '' | Object | - | {} |
+| loading | 是否为 loading 状态 | Boolean | true, false | false |
+| height | 表格可视区高度, 需指定单位 | String | - | - |
 </ClientOnly>
