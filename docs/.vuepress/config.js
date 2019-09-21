@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'CoCo UI',
+  title: 'Coco-UI',
   description: '一个适合学习的 UI 框架',
   base: '/coco/',
   themeConfig: {
