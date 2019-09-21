@@ -4,11 +4,17 @@
     width: 200px;
     height: 200px;
     margin: 3rem auto 0 !important;
+    transform: translateX(18px);
+    user-select: none;
 }
 .home .hero h1#main-title {
     display: none;
 }
 
+.home .hero h1, .home .hero .description, .home .hero .action {
+    margin: 0 auto 2rem !important;
+    user-select: none;
+}
 .theme-container.sidebar-open .sidebar {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border: 0;

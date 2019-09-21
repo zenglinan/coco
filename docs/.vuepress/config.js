@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Coco-UI',
-  description: '一个适合学习的 UI 框架',
+  description: '一个简洁、易用的 UI 框架',
   base: '/coco/',
   themeConfig: {
     displayAllHeaders: true,
