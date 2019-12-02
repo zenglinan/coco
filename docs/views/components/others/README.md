@@ -19,3 +19,8 @@ sidebarDepth: 2
 | toLast | 点击上一页按钮时触发, 传递上一页的索引 | - | - |
 | toNext | 点击下一页按钮时触发, 传递上一页的索引 | - | - |
 </ClientOnly>
+
+## Collapse 折叠面板
+<ClientOnly>
+  <collapse-demo/>
+</ClientOnly>
