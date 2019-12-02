@@ -5,7 +5,7 @@
   "repository": "https://github.com/zenglinan/coco.git",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build src/index.js",
+    "build": "vue-cli-service build --target lib --name coco src/index.js",
     "test:unit": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
