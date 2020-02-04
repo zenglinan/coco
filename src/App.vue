@@ -1,191 +1,191 @@
 <template>
-  <div id="app">
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <div class="sticky">
-      <c-sticky>
-        <div>我是sticky组件</div>
-      </c-sticky>
-    </div>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br><br><br>
-    <!--    <div class="input">-->
-    <!--      <c-input placeholder="请输入用户名" value="支持value,placeholder"></c-input>-->
-    <!--      <c-input prompt='error' error-message="用户名只能为6~12个英文字符" prompt-position="right"></c-input>-->
-    <!--      <c-input :prompt='promptType' placeholder="点我一下就通过" error-message="用户名只能为6~12个英文字符" pass-message="通过"-->
-    <!--               @blur="promptType = 'pass'"></c-input>-->
-    <!--      <c-input value="禁止输入" :disabled=true></c-input>-->
-    <!--      <c-input v-model="message"></c-input>-->
-    <!--      <span>{{message}}</span>-->
-    <!--    </div>-->
-    <!--    <div class="button">-->
-    <!--      <c-button type="default" loading size="3">默认按钮</c-button><br>-->
-    <!--      <c-button type="default"  size="3">默认按钮</c-button><br>-->
-    <!--      <c-button type="success" loading size="2">成功按钮</c-button><br>-->
-    <!--      <c-button type="success" size="2">成功按钮</c-button><br>-->
-    <!--      <c-button type="primary" loading size="1">主要按钮</c-button><br>-->
-    <!--      <c-button type="primary" size="1">主要按钮</c-button><br>-->
-    <!--      <c-button type="info" loading>信息按钮</c-button><br>-->
-    <!--      <c-button type="warning">警告按钮</c-button><br>-->
-    <!--      <c-button type="danger">危险按钮</c-button>-->
+<!--  <div id="app">-->
+<!--    <br><br><br>-->
+<!--    <br><br><br>-->
+<!--    <br><br><br>-->
+<!--    <br><br><br>-->
+<!--    <br><br><br>-->
+<!--    <br><br><br>-->
+<!--    <div class="sticky">-->
+<!--      <c-sticky>-->
+<!--        <div>我是sticky组件</div>-->
+<!--      </c-sticky>-->
+<!--    </div>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br>-->
+<!--    <br><br><br><br><br><br>-->
+<!--    &lt;!&ndash;    <div class="input">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-input placeholder="请输入用户名" value="支持value,placeholder"></c-input>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-input prompt='error' error-message="用户名只能为6~12个英文字符" prompt-position="right"></c-input>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-input :prompt='promptType' placeholder="点我一下就通过" error-message="用户名只能为6~12个英文字符" pass-message="通过"&ndash;&gt;-->
+<!--    &lt;!&ndash;               @blur="promptType = 'pass'"></c-input>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-input value="禁止输入" :disabled=true></c-input>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-input v-model="message"></c-input>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <span>{{message}}</span>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div class="button">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="default" loading size="3">默认按钮</c-button><br>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="default"  size="3">默认按钮</c-button><br>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="success" loading size="2">成功按钮</c-button><br>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="success" size="2">成功按钮</c-button><br>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="primary" loading size="1">主要按钮</c-button><br>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="primary" size="1">主要按钮</c-button><br>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="info" loading>信息按钮</c-button><br>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="warning">警告按钮</c-button><br>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-button type="danger">危险按钮</c-button>&ndash;&gt;-->
 
-    <!--    </div>-->
-    <!--    <div class="table">-->
-    <!--      <c-table :columns="columns"-->
-    <!--               :selected-items.sync="selectedItems"-->
-    <!--               :data="dataSource"-->
-    <!--               has-border-->
-    <!--               selectable-->
-    <!--               :sort-rules.sync="sortRules"-->
-    <!--               :loading="tableLoading"-->
-    <!--               @update:sortRules="sort"-->
-    <!--               height="340px"-->
-    <!--      ></c-table>-->
-    <!--      {{selectedItems}}-->
-    <!--    </div>-->
-    <!--    <div class="table" style="width: 60%;">-->
-    <!--      <c-table :columns="columns" :data="dataSource" compressed></c-table>-->
-    <!--    </div>-->
-    <!--    <div class="pager">-->
-    <!--      <c-pager :total="20" :current.sync="current" :hide-if-one-page="true" @onChange="x"></c-pager>-->
-    <!--    </div>-->
-        <div class="slides" style="margin-left: 500px">
-          <c-slides :width="183" :delay="3000">
-            <c-slides-item>
-              <div class="xxx">1</div>
-            </c-slides-item>
-            <c-slides-item>
-              <div class="xxx">2</div>
-            </c-slides-item>
-            <c-slides-item>
-              <div class="xxx">3</div>
-            </c-slides-item>
-            <c-slides-item>
-              <div class="xxx">4</div>
-            </c-slides-item>
-          </c-slides>
-        </div>
-    <!--        <div class="cascader">-->
-    <!--          <c-cascader :selected.sync="selected" :db="data">-->
-    <!--          </c-cascader>-->
-    <!--        </div>-->
-    <!--        <div class="collapse">-->
-    <!--          <c-collapse :selected.sync="name">-->
-    <!--            <c-collapse-item title="标题1" name="1">-->
-    <!--              内容1-->
-    <!--            </c-collapse-item>-->
-    <!--            <c-collapse-item title="标题2" name="2">-->
-    <!--              内容2-->
-    <!--            </c-collapse-item>-->
-    <!--            <c-collapse-item title="标题3" name="3">-->
-    <!--              内容3-->
-    <!--            </c-collapse-item>-->
-    <!--            <c-collapse-item title="标题4" name="4">-->
-    <!--              内容4-->
-    <!--            </c-collapse-item>-->
-    <!--          </c-collapse>-->
-    <!--        </div>-->
-    <!--    <div class="popover" style="margin-left: 200px;">-->
-    <!--      <c-popover trigger="click" direction="left">-->
-    <!--        <template v-slot:content>-->
-    <!--          Left-->
-    <!--        </template>-->
-    <!--        <c-button>Left(click)</c-button>-->
-    <!--      </c-popover>-->
-    <!--      <c-popover trigger="click" direction="bottom" delay="300">-->
-    <!--        <template v-slot:content="slotProps">-->
-    <!--          <p>我里面可以加html标签,还可以加关闭按钮</p>-->
-    <!--          <c-button @click="slotProps.close()">关闭</c-button>-->
-    <!--        </template>-->
-    <!--        <c-button>Delay 300ms</c-button>-->
-    <!--      </c-popover>-->
-    <!--      <c-popover trigger="hover" direction="top" delay="1000">-->
-    <!--        <template v-slot:content="slotProps">-->
-    <!--          <c-button @click="slotProps.close()">关闭</c-button>-->
-    <!--        </template>-->
-    <!--        <c-button>Top(hover)</c-button>-->
-    <!--      </c-popover>-->
-    <!--      <c-popover trigger="click" direction="right">-->
-    <!--        <template v-slot:content>-->
-    <!--          Rightxxxxxxxxxxxxxxx-->
-    <!--          xxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-    <!--        </template>-->
-    <!--        <c-button>Right(click)</c-button>-->
-    <!--      </c-popover>-->
-    <!--    </div>-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div class="table">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-table :columns="columns"&ndash;&gt;-->
+<!--    &lt;!&ndash;               :selected-items.sync="selectedItems"&ndash;&gt;-->
+<!--    &lt;!&ndash;               :data="dataSource"&ndash;&gt;-->
+<!--    &lt;!&ndash;               has-border&ndash;&gt;-->
+<!--    &lt;!&ndash;               selectable&ndash;&gt;-->
+<!--    &lt;!&ndash;               :sort-rules.sync="sortRules"&ndash;&gt;-->
+<!--    &lt;!&ndash;               :loading="tableLoading"&ndash;&gt;-->
+<!--    &lt;!&ndash;               @update:sortRules="sort"&ndash;&gt;-->
+<!--    &lt;!&ndash;               height="340px"&ndash;&gt;-->
+<!--    &lt;!&ndash;      ></c-table>&ndash;&gt;-->
+<!--    &lt;!&ndash;      {{selectedItems}}&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div class="table" style="width: 60%;">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-table :columns="columns" :data="dataSource" compressed></c-table>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div class="pager">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-pager :total="20" :current.sync="current" :hide-if-one-page="true" @onChange="x"></c-pager>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="slides" style="margin-left: 500px">&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-slides :width="183" :delay="3000">&ndash;&gt;-->
+<!--&lt;!&ndash;            <c-slides-item>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="xxx">1</div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </c-slides-item>&ndash;&gt;-->
+<!--&lt;!&ndash;            <c-slides-item>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="xxx">2</div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </c-slides-item>&ndash;&gt;-->
+<!--&lt;!&ndash;            <c-slides-item>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="xxx">3</div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </c-slides-item>&ndash;&gt;-->
+<!--&lt;!&ndash;            <c-slides-item>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="xxx">4</div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </c-slides-item>&ndash;&gt;-->
+<!--&lt;!&ndash;          </c-slides>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <div class="cascader">&ndash;&gt;-->
+<!--    &lt;!&ndash;          <c-cascader :selected.sync="selected" :db="data">&ndash;&gt;-->
+<!--    &lt;!&ndash;          </c-cascader>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <div class="collapse">&ndash;&gt;-->
+<!--    &lt;!&ndash;          <c-collapse :selected.sync="name">&ndash;&gt;-->
+<!--    &lt;!&ndash;            <c-collapse-item title="标题1" name="1">&ndash;&gt;-->
+<!--    &lt;!&ndash;              内容1&ndash;&gt;-->
+<!--    &lt;!&ndash;            </c-collapse-item>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <c-collapse-item title="标题2" name="2">&ndash;&gt;-->
+<!--    &lt;!&ndash;              内容2&ndash;&gt;-->
+<!--    &lt;!&ndash;            </c-collapse-item>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <c-collapse-item title="标题3" name="3">&ndash;&gt;-->
+<!--    &lt;!&ndash;              内容3&ndash;&gt;-->
+<!--    &lt;!&ndash;            </c-collapse-item>&ndash;&gt;-->
+<!--    &lt;!&ndash;            <c-collapse-item title="标题4" name="4">&ndash;&gt;-->
+<!--    &lt;!&ndash;              内容4&ndash;&gt;-->
+<!--    &lt;!&ndash;            </c-collapse-item>&ndash;&gt;-->
+<!--    &lt;!&ndash;          </c-collapse>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div class="popover" style="margin-left: 200px;">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-popover trigger="click" direction="left">&ndash;&gt;-->
+<!--    &lt;!&ndash;        <template v-slot:content>&ndash;&gt;-->
+<!--    &lt;!&ndash;          Left&ndash;&gt;-->
+<!--    &lt;!&ndash;        </template>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <c-button>Left(click)</c-button>&ndash;&gt;-->
+<!--    &lt;!&ndash;      </c-popover>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-popover trigger="click" direction="bottom" delay="300">&ndash;&gt;-->
+<!--    &lt;!&ndash;        <template v-slot:content="slotProps">&ndash;&gt;-->
+<!--    &lt;!&ndash;          <p>我里面可以加html标签,还可以加关闭按钮</p>&ndash;&gt;-->
+<!--    &lt;!&ndash;          <c-button @click="slotProps.close()">关闭</c-button>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </template>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <c-button>Delay 300ms</c-button>&ndash;&gt;-->
+<!--    &lt;!&ndash;      </c-popover>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-popover trigger="hover" direction="top" delay="1000">&ndash;&gt;-->
+<!--    &lt;!&ndash;        <template v-slot:content="slotProps">&ndash;&gt;-->
+<!--    &lt;!&ndash;          <c-button @click="slotProps.close()">关闭</c-button>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </template>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <c-button>Top(hover)</c-button>&ndash;&gt;-->
+<!--    &lt;!&ndash;      </c-popover>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <c-popover trigger="click" direction="right">&ndash;&gt;-->
+<!--    &lt;!&ndash;        <template v-slot:content>&ndash;&gt;-->
+<!--    &lt;!&ndash;          Rightxxxxxxxxxxxxxxx&ndash;&gt;-->
+<!--    &lt;!&ndash;          xxxxxxxxxxxxxxxxxxxxxxxxxxx&ndash;&gt;-->
+<!--    &lt;!&ndash;        </template>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <c-button>Right(click)</c-button>&ndash;&gt;-->
+<!--    &lt;!&ndash;      </c-popover>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
 
-    <div class="tabs">
-      <c-tabs :selectedItems.sync="selectedItems" direction="row">
-        <c-tab-nav>
-          <c-tab name="setting" icon="i-setting">Setting</c-tab>
-          <c-tab name="tab2">Tab2</c-tab>
-          <c-tab name="tab3">Tab3</c-tab>
-          <c-tab name="tab4">Tab4</c-tab>
-          <c-tab name="tab5">Tab5</c-tab>
-          <c-tab name="tab6">Tab6</c-tab>
-          <c-tab name="girl" disabled>美女</c-tab>
-        </c-tab-nav>
+<!--&lt;!&ndash;    <div class="tabs">&ndash;&gt;-->
+<!--&lt;!&ndash;      <c-tabs :selectedItems.sync="selectedItems" direction="row">&ndash;&gt;-->
+<!--&lt;!&ndash;        <c-tab-nav>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab name="setting" icon="i-setting">Setting</c-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab name="tab2">Tab2</c-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab name="tab3">Tab3</c-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab name="tab4">Tab4</c-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab name="tab5">Tab5</c-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab name="tab6">Tab6</c-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab name="girl" disabled>美女</c-tab>&ndash;&gt;-->
+<!--&lt;!&ndash;        </c-tab-nav>&ndash;&gt;-->
 
-        <c-tab-content>
-          <c-tab-pane name="setting">
-            <div>content1</div>
-          </c-tab-pane>
-          <c-tab-pane name="tab2">
-            <div>content2</div>
-          </c-tab-pane>
-          <c-tab-pane name="tab3">
-            <div>content2</div>
-          </c-tab-pane>
-          <c-tab-pane name="tab4">
-            <div>content2</div>
-          </c-tab-pane>
-          <c-tab-pane name="tab5">
-            <div>content2</div>
-          </c-tab-pane>
-          <c-tab-pane name="tab6">
-            <div>content2</div>
-          </c-tab-pane>
-          <c-tab-pane name="girl">
-            <div>骗你的</div>
-          </c-tab-pane>
-        </c-tab-content>
-      </c-tabs>
-    </div>
+<!--&lt;!&ndash;        <c-tab-content>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab-pane name="setting">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>content1</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab-pane name="tab2">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>content2</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab-pane name="tab3">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>content2</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab-pane name="tab4">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>content2</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab-pane name="tab5">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>content2</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab-pane name="tab6">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>content2</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--&lt;!&ndash;          <c-tab-pane name="girl">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>骗你的</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--&lt;!&ndash;        </c-tab-content>&ndash;&gt;-->
+<!--&lt;!&ndash;      </c-tabs>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
 
-    <div class="tabs">
-      <!--      <c-tabs :selectedItems.sync="selectedItems" direction="column">-->
-      <!--        <c-tab-nav>-->
-      <!--          <c-tab name="setting" icon="i-setting">Setting</c-tab>-->
-      <!--          <c-tab name="tab2">Tab2</c-tab>-->
-      <!--          <c-tab name="girl" disabled>美女</c-tab>-->
-      <!--        </c-tab-nav>-->
+<!--    <div class="tabs">-->
+<!--      &lt;!&ndash;      <c-tabs :selectedItems.sync="selectedItems" direction="column">&ndash;&gt;-->
+<!--      &lt;!&ndash;        <c-tab-nav>&ndash;&gt;-->
+<!--      &lt;!&ndash;          <c-tab name="setting" icon="i-setting">Setting</c-tab>&ndash;&gt;-->
+<!--      &lt;!&ndash;          <c-tab name="tab2">Tab2</c-tab>&ndash;&gt;-->
+<!--      &lt;!&ndash;          <c-tab name="girl" disabled>美女</c-tab>&ndash;&gt;-->
+<!--      &lt;!&ndash;        </c-tab-nav>&ndash;&gt;-->
 
-      <!--        <c-tab-content>-->
-      <!--          <c-tab-pane name="setting">-->
-      <!--            <div>content1</div>-->
-      <!--          </c-tab-pane>-->
-      <!--          <c-tab-pane name="tab2">-->
-      <!--            <div>content2</div>-->
-      <!--          </c-tab-pane>-->
-      <!--          <c-tab-pane name="girl">-->
-      <!--            <div>骗你的</div>-->
-      <!--          </c-tab-pane>-->
-      <!--        </c-tab-content>-->
-      <!--      </c-tabs>-->
-    </div>
-  </div>
+<!--      &lt;!&ndash;        <c-tab-content>&ndash;&gt;-->
+<!--      &lt;!&ndash;          <c-tab-pane name="setting">&ndash;&gt;-->
+<!--      &lt;!&ndash;            <div>content1</div>&ndash;&gt;-->
+<!--      &lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--      &lt;!&ndash;          <c-tab-pane name="tab2">&ndash;&gt;-->
+<!--      &lt;!&ndash;            <div>content2</div>&ndash;&gt;-->
+<!--      &lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--      &lt;!&ndash;          <c-tab-pane name="girl">&ndash;&gt;-->
+<!--      &lt;!&ndash;            <div>骗你的</div>&ndash;&gt;-->
+<!--      &lt;!&ndash;          </c-tab-pane>&ndash;&gt;-->
+<!--      &lt;!&ndash;        </c-tab-content>&ndash;&gt;-->
+<!--      &lt;!&ndash;      </c-tabs>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
 </template>
 
 <script>
@@ -316,13 +316,18 @@
           this.tableLoading = false
         }, 600)
       }
+    },
+    mounted() {
+        console.log(this.$mousePosition())
     }
   }
 </script>
 
 <style lang="scss">
   * {box-sizing: border-box;margin: 0;padding: 0;}
-
+  html,body {
+    height: 100%;
+  }
   .xxx {
     width: 400px;
     height: 200px;

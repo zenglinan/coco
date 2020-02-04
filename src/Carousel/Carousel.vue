@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import '../../asset/icon'
+  import '../Icon/icon'
 
   export default {
     name: "coco-carousel",
