@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import Icon from '../Icon/icon'
+  import Icon from '../Icon/icon.vue'
 
   export default {
     name: 'coco-button',

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import Icon from '../Icon/icon'
+  import Icon from '../../src/Icon/icon'
 
   export default {
     name: "CascaderItem",
