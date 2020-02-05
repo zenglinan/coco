@@ -37,6 +37,9 @@
     "preset": "@vue/cli-plugin-unit-jest",
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
     }
   },
   "browserslist": [

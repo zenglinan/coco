@@ -1,5 +1,5 @@
 import {shallowMount, mount} from "@vue/test-utils";
-import Button from '../../src/Button/Button.vue'
+import Button from '@/Button/Button.vue'
 import {destroyVM} from "../utils";
 
 let vm
@@ -28,6 +28,16 @@ describe('Button Test', () => {
 
       expect(vm.classes('nouse')).toBe(true)
       expect(vm.find('.loading').exists()).toBe(true)
+    })
+
+    it('iconPosition', () => {
+      vm = shallowMount(Button, {
+        propsData: {
+          iconPosition: 'left'
+        }
+      })
+
+      expect(vm.classes('icon-left')).toBe(true)
     })
 
     it('size', () => {

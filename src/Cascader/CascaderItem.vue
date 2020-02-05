@@ -1,9 +1,9 @@
 <template>
   <div class="cascaderItem">
     <div class="left">
-      <div class="cityItem" v-for="itemLeft in city" @click="onClickCity(itemLeft)">
-        <div class="name">{{itemLeft.name}}</div>
-        <c-icon icon="i-right" class="icon" v-if="!itemLeft.isLeap"></c-icon>
+      <div class="cityItem" v-for="item in city" @click="onClickCity(item)">
+        <div class="name">{{item.name}}</div>
+        <c-icon icon="i-right" class="icon" v-if="!item.isLeap"></c-icon>
       </div>
     </div>
     <div class="right" v-if="rightItems">
@@ -57,7 +57,7 @@
         this.updateSelected(copy)
       }
     },
-    components:{
+    components: {
       'c-icon': Icon
     }
   }
@@ -93,10 +93,12 @@
       align-items: center;
       cursor: pointer;
       white-space: nowrap;
+
       .icon {
         width: .8em;
         height: .8em;
       }
+
       &:hover {
         background: $beige;
       }

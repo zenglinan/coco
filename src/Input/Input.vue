@@ -9,6 +9,7 @@
            @blur="$emit('blur',$event.target.value)"
            @input="$emit('input',$event.target.value)"
            @focus="$emit('focus',$event.target.value)"
+           @click="$emit('click',$event.target.value)"
     >
     <div v-if="prompt" class="prompt">
       <c-icon icon="i-error"></c-icon>

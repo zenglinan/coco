@@ -4,7 +4,9 @@
       {{getSelectedName}}
     </div>
     <div class="popover" v-show="popoverVisible" ref="popover">
-      <cascader-item :city="citys" :selected="selected" @update:selected="updateSelected"></cascader-item>
+      <cascader-item :city="cities" :selected="selected"
+                     @update:selected="updateSelected">
+      </cascader-item>
     </div>
   </div>
 </template>
@@ -27,7 +29,7 @@
       return {
         popoverVisible: false,
         active: false,
-        citys: []
+        cities: []
       }
     },
     components: {
@@ -35,8 +37,7 @@
     },
     methods: {
       updateSelected(newSelected) {  // 更新选中区域的数组selected
-        let lastSelectedId = newSelected.length - 1
-        let lastSelected = newSelected[lastSelectedId]
+        let lastSelected = newSelected[newSelected.length - 1]
         this.getDb(lastSelected.id).then(res => {  // 同时请求当前选中区域的children
           this.$set(lastSelected, 'children', res)
         })
@@ -53,7 +54,7 @@
       clickTrigger() {
         this.toggle()
       },
-      onClickDocument(e){
+      onClickDocument(e) {
         let popover = this.$refs.popover
         if (e.target === popover || popover.contains(e.target)) {
         } else {
@@ -63,12 +64,12 @@
       open() {
         this.active = true
         this.popoverVisible = true
-        document.addEventListener('click',this.onClickDocument)  // 点击页面其他地方关闭浮层
+        document.addEventListener('click', this.onClickDocument)  // 点击页面其他地方关闭浮层
       },
       close() {
         this.active = false
         this.popoverVisible = false
-        document.removeEventListener('click',this.onClickDocument)
+        document.removeEventListener('click', this.onClickDocument)
       },
       toggle() {
         if (this.popoverVisible === false) {
@@ -88,7 +89,7 @@
     },
     mounted() {  // 初始化citys第一级数据
       this.getDb().then(res => {
-        this.citys = res
+        this.cities = res
       })
 
     }

@@ -39,7 +39,6 @@
         type: String,
         default: "left",
         validator(value) {
-          // return value === 'left' || value === 'right'
           return ['left', 'right'].indexOf(value) !== -1
         }
       },

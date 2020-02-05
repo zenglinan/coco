@@ -1,44 +1,39 @@
 <template>
   <div class="c-table" ref="tableWrapper">
     <div class="tableInnerWrapper" :style="{height}" ref="innerWrapper">
-      <table :class="{compressed, hasBorder}" ref="table">
+      <table :class="tableClass" ref="table">
         <thead ref="thead">
-        <tr style="width: 100%">
-          <th v-if="selectable" @change="onChangeAll($event)" :style="{width: '60px'}">
+        <tr class="thead-tr">
+          <th v-if="selectable" @change="onChangeAll($event)" class="select">
             <div class="thContent">
               <input type="checkbox" :checked="selector">
             </div>
           </th>
-          <th v-if="indexVisible" :style="{width: '60px'}">#</th>
-          <th v-for="(column, columnIndex) in columns"
-              :key="columnIndex"
-              :class="{canSort: column.field in sortRules}"
-              @click="column.field in sortRules && onChangeSortRules(column.field)"
-              :style="{width: column.width}"
+          <th v-if="indexVisible" class="index">#</th>
+          <th v-for="(it, idx) in columns" :key="idx"
+              :class="{canSort: it.field in sortRules}" :style="{width: it.width}"
+              @click="it.field in sortRules && onChangeSortRules(it.field)"
           >
             <div class="thContent">
-              <span>{{column.text}}</span>
-              <div class="tableSorter" v-if="column.field in sortRules">
-                <c-icon icon="i-asc" :class="{active: sortRules[column.field] === 'asc'}"></c-icon>
-                <c-icon icon="i-desc" :class="{active: sortRules[column.field] === 'desc'}"></c-icon>
+              <span>{{it.text}}</span>
+              <div class="tableSorter" v-if="it.field in sortRules">
+                <c-icon icon="i-asc" :class="{active: sortRules[it.field] === 'asc'}"></c-icon>
+                <c-icon icon="i-desc" :class="{active: sortRules[it.field] === 'desc'}"></c-icon>
               </div>
             </div>
           </th>
         </tr>
         </thead>
-        <tbody style="width: 100%" :class="{'striped': striped}">
-        <tr v-for="(dataItem, dataIndex) in data" :key="dataIndex" style="width: 100%">
-          <td v-if="selectable"
+        <tbody :class="tBodyClass">
+        <tr v-for="(dataItem, dataIndex) in data" :key="dataIndex" class="tbody-tr">
+          <td v-if="selectable" class="select"
               @change="onChangeItem($event, dataItem, dataIndex)"
-              :style="{width: '60px'}"
           >
             <input type="checkbox" :checked="selector">
           </td>
-          <td v-if="indexVisible" :style="{width: '60px'}">
-            {{dataIndex + 1}}
-          </td>
-          <template v-for="column in columns">
-            <td :style="{width: column.width}">{{dataItem[column.field]}}</td>
+          <td v-if="indexVisible" class="index">{{dataIndex + 1}}</td>
+          <template v-for="it in columns">
+            <td :style="{width: it.width}">{{dataItem[it.field]}}</td>
           </template>
         </tr>
         </tbody>
@@ -129,23 +124,34 @@
       },
       onChangeSortRules(field) {
         let copy = JSON.parse(JSON.stringify(this.sortRules))
+        this.resetObj(copy)  // 先将所有字段的规则置空
         switch (this.sortRules[field]) {
           case 'asc':
-            this.resetObj(copy)  // 先将所有字段的规则置空
             copy[field] = 'desc';  // 指定对应字段的排序规则
             break;
           case 'desc':
-            this.resetObj(copy)
             copy[field] = 'asc';
             break;
           default:
-            this.resetObj(copy)
             copy[field] = 'asc';
         }
         this.$emit('update:sortRules', copy)
       },
       resetObj(object) {
         Object.keys(object).forEach(key => object[key] = '')
+      }
+    },
+    computed: {
+      tableClass() {
+        return {
+          compressed: this.compressed,
+          hasBorder: this.hasBorder
+        }
+      },
+      tBodyClass() {
+        return {
+          striped: this.striped
+        }
       }
     },
     components: {
@@ -175,9 +181,15 @@
     table {@include border();border-collapse: separate;border-spacing: 0;
       text-align: left;display: table;width: 100%;
 
+      .index, .select{ width: 60px;}
+
       thead {
         tr {
           background-color: rgb(255, 255, 255);
+
+          .thead-tr {
+            width: 100%;
+          }
 
           th.canSort {
             transition: all .3s;
@@ -202,14 +214,20 @@
       }
 
       tbody {
-        &.striped{
-          tr{
-            &:nth-child(even) {background-color: rgb(245,247,250);}
+        width: 100%;
+        &.striped {
+          tr {
+            &:nth-child(even) {background-color: rgb(245, 247, 250);}
+
             &:hover {background: rgb(235, 247, 255);}
           }
         }
+
         tr {transition: background .3s;color: #606266;font-size: 14px;background-color: #fff;
+
+          &.tbody-tr { width: 100%; }
           &:hover {background: rgb(235, 247, 255);}
+
         }
       }
 
